@@ -1,0 +1,22 @@
+<div>Description</div>
+<h3>Select dates</h3>
+<ul>
+  <li *ngFor="let proposedDate of dates">
+    <input type="checkbox" name="selectedDates" value="{{proposedDate}}"/>
+    <label>{{proposedDate}}</label>
+  </li>
+</ul>
+<h3>Select places</h3>
+<ul>
+  <li *ngFor="let proposedPlace of places">
+    <input type="checkbox" name="proposedPlaces" value="{{proposedPlace}}"/>
+    <label>{{proposedPlace}}</label>
+  </li>
+</ul>
+<button>Vote</button>
+<hr/>
+<h3>Progress</h3>
+<div>
+  <div>Places progress placeholder</div>
+  <div>Dates progress placeholder</div>
+</div>
