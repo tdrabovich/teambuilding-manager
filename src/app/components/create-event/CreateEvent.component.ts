@@ -32,7 +32,7 @@ export class CreateEventComponent implements OnInit {
     const id = UUID.UUID();
     // save dto
     this.link = this.SERVER_HOST + 'event/' + id;
-    let event:Event = {id: 2, name: "Awesome Service 2", "dates":[], "places":[]};
+    let event:Event = {id: id, name: "Awesome Service 2", "dates":[], "places":[]};
     this.createEventService.createEvent(event).subscribe(
         (data: Event) => this.event = data, // success path
         error =>
