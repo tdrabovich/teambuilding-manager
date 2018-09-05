@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import {Route, RouterModule, Routes} from '@angular/router';
 import {CreateEventComponent} from './components/create-event/CreateEvent.component';
+import {EventLinkManagerComponent} from './components/create-event/event-link-manager/EventLinkManager.component';
 
 const appRoutes: Routes = [
   {path: 'index', component: CreateEventComponent },
@@ -13,7 +14,8 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    CreateEventComponent
+    CreateEventComponent,
+    EventLinkManagerComponent
   ],
   imports: [
     BrowserModule,
