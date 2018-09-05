@@ -1,1 +1,16 @@
-{}
+{
+  "events": [
+    {
+      "id": 1,
+      "name": "Awesome Event",
+      "dates": [
+        "2018-01-01",
+        "2018-01-02"
+      ],
+      "places": [
+        "Place1",
+        "Place2"
+      ]
+    }
+  ]
+}
