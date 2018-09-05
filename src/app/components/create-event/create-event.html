@@ -1,8 +1,29 @@
 <div>
   <h2>Create a team building of your dream!</h2>
-  <label>
-    TeamBuilding Name
-    <input type="text">
-  </label>
-  <label></label>
+  <div>
+    <label>
+      TeamBuilding Name:
+      <input type="text" id="event-name" formControlName="eventName">
+    </label>
+  </div>
+  <div>
+    <label>
+      Dates:
+      <input type="date" id="event-dates">
+    </label>
+  </div>
+  <div>
+    <label>Places:</label>
+    <ul>
+      <li *ngFor="let place of places">
+        <label>
+          <input type="text" [value]="place">
+        </label>
+      </li>
+    </ul>
+    <button (click)="addPlace()">Add place</button>
+  </div>
+  <button (click)="generateLink()">Generate Link</button>
+  <event-link-manager *ngIf="link"
+    [link]="link"></event-link-manager>
 </div>
