@@ -24,6 +24,7 @@
     <button (click)="addPlace()">Add place</button>
   </div>
   <button (click)="generateLink()">Generate Link</button>
+  <label *ngIf="!!errorMessage">{{errorMessage}}</label>
   <event-link-manager *ngIf="link"
     [link]="link"></event-link-manager>
 </div>

@@ -11,6 +11,12 @@
         "Place1",
         "Place2"
       ]
+    },
+    {
+      "id": 2,
+      "name": "Awesome Service 2",
+      "dates": [],
+      "places": []
     }
   ]
 }
