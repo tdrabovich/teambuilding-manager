@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {UUID} from 'angular2-uuid';
 
 @Component({
   selector: 'app-root',
