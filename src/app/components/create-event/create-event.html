@@ -1,23 +1,32 @@
 <div>
   <h2>Create a team building of your dream!</h2>
-  <div>
+  <form formGroupName="formGroup">
     <label>
       TeamBuilding Name:
-      <input type="text" id="event-name" formControlName="eventName">
+      <input
+        type="text"
+        [formControlName]="eventName" >
     </label>
-  </div>
+  </form>
   <div>
     <label>
       Dates:
-      <input type="date" id="event-dates">
     </label>
+    <ul>
+      <li *ngFor="let date of eventDates">
+        <label>
+          <input type="date" (change)="setDate(date, $event)">
+        </label>
+      </li>
+      <button (click)="addDate()">Add Date</button>
+    </ul>
   </div>
   <div>
     <label>Places:</label>
     <ul>
       <li *ngFor="let place of places">
         <label>
-          <input type="text" [value]="place">
+          <input type="text" (change)="setPlace(place, $event)">
         </label>
       </li>
     </ul>
@@ -25,6 +34,7 @@
   </div>
   <button (click)="generateLink()">Generate Link</button>
   <label *ngIf="!!errorMessage">{{errorMessage}}</label>
-  <event-link-manager *ngIf="link"
-    [link]="link"></event-link-manager>
+  <app-event-link-manager *ngIf="link"
+    [link]="link"></app-event-link-manager>
+
 </div>

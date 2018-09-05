@@ -1,7 +1,7 @@
 import {Component, Input} from '@angular/core';
 
 @Component({
-  selector: 'event-link-manager',
+  selector: 'app-event-link-manager',
   templateUrl: 'event-link-manager.html'
 })
 export class EventLinkManagerComponent {

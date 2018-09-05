@@ -7,6 +7,7 @@ import {Route, RouterModule, Routes} from '@angular/router';
 import {CreateEventComponent} from './components/create-event/CreateEvent.component';
 import {PollComponent} from './components/poll/poll.component';
 import {EventLinkManagerComponent} from './components/create-event/event-link-manager/EventLinkManager.component';
+import {ReactiveFormsModule} from '@angular/forms';
 
 const appRoutes: Routes = [
   {path: 'index', component: CreateEventComponent },
@@ -22,6 +23,7 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
